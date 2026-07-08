@@ -1,0 +1,130 @@
+#site{
+    width: 100%;
+
+    .site_inner{
+        padding: 1rem;
+        
+        .site_title{
+            position: sticky;
+            left: 0;
+            top: 75px;
+            width: 70%;
+            height: 7vw;
+            line-height: 7.5vw;
+            font-size: 5vw;
+            font-weight: 900;
+            background-color: var(--mainBg-color);
+            padding-bottom: 10px;
+            border-bottom: 0.4vw solid var(--black100);
+            margin-bottom: 30px;
+
+            em{
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .site_wrap{
+            .site_item{
+                position: sticky;
+                height: 70vh;
+                left: 0;
+
+                //자식들을 가로세로 가운데정렬
+                @include flex-center;
+                flex-direction: column;
+
+                &.s1{
+                    top: 200px;
+                    background-color: var(--subBg100);
+                    @media(max-width:800px){top: 140px;}
+                }
+                &.s2{
+                    top: 220px;
+                    background-color: var(--subBg200);
+                    @media(max-width:800px){top: 160px;}
+                }
+                &.s3{
+                    top: 240px;
+                    background-color: var(--subBg300);
+                    @media(max-width:800px){top: 180px;}
+                }
+                &.s4{
+                    top: 260px;
+                    background-color: var(--subBg400);
+                    @media(max-width:800px){top: 200px;}
+                }
+
+                .num{
+                    position: absolute;
+                    top: 1vw;
+                    left: 1vw;
+                    font-size: 4vw;
+                    font-weight: 900;
+                    font-family: var(--mainNum-font);
+                }
+                .text{
+                    margin-bottom: 16px;
+                    >div{
+                        font-size: 3vw;
+                        font-weight: 600;
+                        text-align: center;
+                        line-height: 1.1;
+                        text-transform: uppercase;
+                        text-decoration: underline;
+
+                        @media(max-width:800px){
+                            font-size: 30px;
+                        }
+                        @media(max-width:600px){
+                            font-size: 25px;
+                        }
+                    }
+                    
+                }
+                .title{
+                    font-family: var(--mainNum-font);
+                    margin-bottom: 16px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: color 0.3s;
+
+                    &:hover{
+                        color: var(--white);
+                        text-shadow: 1px 1px 0px var(--black100);
+                    }
+                }
+                .btn{
+                    
+                    >a{
+                        text-decoration: underline;
+                        display: inline-block;
+                        margin: 0 10px;
+                        transition: 0.5s;
+
+                        &:hover{
+                            color: var(--mainBg-color);
+                        }
+                    }
+                }
+                .info{
+                    @include flex-between;
+                    position: absolute;
+                    width: 98%;
+                    bottom: 1rem;
+                    left: 1%;
+                    border-top: 1px solid var(--black100);
+                    border-bottom: 1px solid var(--black100);
+                    padding: 0 5px;
+                    
+                    >span{
+                        font-family: var(--mainKor-font);
+                        font-size: 14px;
+                        padding: 3px 0;
+                    }
+
+                    @media(max-width:600px){display: none;}
+                }
+            }
+        }
+    }
+}

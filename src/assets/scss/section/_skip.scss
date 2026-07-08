@@ -1,0 +1,18 @@
+#skip{
+
+    a{
+        display: block;
+        background-color: var(--black);
+        position: absolute;
+        top: -100px;
+        left: 10px;
+        z-index: 101;
+        padding: 10px;
+        color: var(--white);
+
+        &:focus{
+            top: 10px;
+        }
+    }
+
+}

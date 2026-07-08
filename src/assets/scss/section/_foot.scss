@@ -1,0 +1,95 @@
+#footer{
+    width: 100%;
+    height: 100vh;
+
+    .footer_inner{
+        width: 100%;
+        padding: 1rem;
+
+        .footer_text{
+            width: 100%;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--black);
+            border-bottom: 1px solid var(--black);
+            padding: 5px;
+        }
+        .footer_info{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 100px 0;
+            @media(max-width:800px){
+                flex-direction: column;
+            }
+            
+            .left{
+                width: 40%;
+                .title{
+                    border-top: 1px solid var(--black);
+                    border-bottom: 1px solid var(--black);
+                    padding: 20px 0;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background-color: var(--black400);
+                        border-color: transparent;
+                        //보더의 컬러를 투명으로 변경
+                    }
+
+                    >a{}
+                }
+                .desc{
+                    padding-top: 20px;
+                    font-size: 12px;
+                    @media(max-width:800px){
+                        margin-bottom: 40px;
+                    }
+                }
+
+                @media(max-width:800px){
+                width: 100%;}
+            }
+            .right{
+                width: 50%;
+
+                h3{
+                    font-size: 12px;
+                    border-top: 1px solid var(--black);
+                    border-bottom: 1px solid var(--black);
+                    padding: 10px 0 35px 0;
+                }
+                ul{
+                    li{
+                         border-bottom: 1px solid var(--black);
+                        transition: 0.3s;
+                        cursor: pointer;
+                       
+
+                        a{
+                            display: inline-block;
+                            padding: 12px 0;
+                        }
+                        em{
+                            padding-left: 10px;
+                            font-size: 12px;
+                            opacity: 0;
+                            transition: 0.3s;
+                        }
+                        &:hover>em{
+                            opacity: 1;
+                        }
+                    }
+                }
+                @media(max-width:800px){
+                width: 100%;}
+            }
+
+        }
+        .footer_bottom{text-align: center;}
+    }
+}
